@@ -24,7 +24,7 @@ pip3 install pafy<br>
 
 #=============================================================
 
-โหลดโทเคน = git clone https://github.com/Cupzaa/QRtoken.git
+โหลดโทเคน = git clone https://github.com/Cupzaa/pro-speed.git
 
 ติดตาม ช่อง = https://www.youtube.com/watch?v=nLWE6TMCwIQ
 
