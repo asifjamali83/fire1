@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from ..akad.ttypes import Message
+from akad.ttypes import Message
 from random import randint
 
 import json, ntpath
@@ -202,6 +202,7 @@ class Talk(object):
     def sendImageWithURL(self, to, url):
         path = self.downloadFileURL(url, 'path')
         return self.sendImage(to, path)
+        return self.deleteFile(path)
 
     @loggedIn
     def sendGIF(self, to, path):
@@ -211,6 +212,7 @@ class Talk(object):
     def sendGIFWithURL(self, to, url):
         path = self.downloadFileURL(url, 'path')
         return self.sendGIF(to, path)
+        return self.deleteFile(path)
 
     @loggedIn
     def sendVideo(self, to, path):
@@ -221,6 +223,7 @@ class Talk(object):
     def sendVideoWithURL(self, to, url):
         path = self.downloadFileURL(url, 'path')
         return self.sendVideo(to, path)
+        return self.deleteFile(path)
 
     @loggedIn
     def sendAudio(self, to, path):
@@ -231,6 +234,7 @@ class Talk(object):
     def sendAudioWithURL(self, to, url):
         path = self.downloadFileURL(url, 'path')
         return self.sendAudio(to, path)
+        return self.deleteFile(path)
 
     @loggedIn
     def sendFile(self, to, path, file_name=''):
@@ -244,6 +248,7 @@ class Talk(object):
     def sendFileWithURL(self, to, url, fileName=''):
         path = self.downloadFileURL(url, 'path')
         return self.sendFile(to, path, fileName)
+        return self.deleteFile(path)
 
     """Contact"""
         
