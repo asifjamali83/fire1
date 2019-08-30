@@ -833,11 +833,11 @@ class findBuddyContactsByQuery_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype1123, _size1120) = iprot.readListBegin()
-                    for _i1124 in range(_size1120):
-                        _elem1125 = BuddySearchResult()
-                        _elem1125.read(iprot)
-                        self.success.append(_elem1125)
+                    (_etype1130, _size1127) = iprot.readListBegin()
+                    for _i1131 in range(_size1127):
+                        _elem1132 = BuddySearchResult()
+                        _elem1132.read(iprot)
+                        self.success.append(_elem1132)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -860,8 +860,8 @@ class findBuddyContactsByQuery_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter1126 in self.success:
-                iter1126.write(oprot)
+            for iter1133 in self.success:
+                iter1133.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -1025,11 +1025,11 @@ class getBuddyContacts_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype1130, _size1127) = iprot.readListBegin()
-                    for _i1131 in range(_size1127):
-                        _elem1132 = Contact()
-                        _elem1132.read(iprot)
-                        self.success.append(_elem1132)
+                    (_etype1137, _size1134) = iprot.readListBegin()
+                    for _i1138 in range(_size1134):
+                        _elem1139 = Contact()
+                        _elem1139.read(iprot)
+                        self.success.append(_elem1139)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -1052,8 +1052,8 @@ class getBuddyContacts_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter1133 in self.success:
-                iter1133.write(oprot)
+            for iter1140 in self.success:
+                iter1140.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -1426,10 +1426,10 @@ class getCountriesHavingBuddy_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype1137, _size1134) = iprot.readListBegin()
-                    for _i1138 in range(_size1134):
-                        _elem1139 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem1139)
+                    (_etype1144, _size1141) = iprot.readListBegin()
+                    for _i1145 in range(_size1141):
+                        _elem1146 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem1146)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -1452,8 +1452,8 @@ class getCountriesHavingBuddy_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter1140 in self.success:
-                oprot.writeString(iter1140.encode('utf-8') if sys.version_info[0] == 2 else iter1140)
+            for iter1147 in self.success:
+                oprot.writeString(iter1147.encode('utf-8') if sys.version_info[0] == 2 else iter1147)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -1570,11 +1570,11 @@ class getNewlyReleasedBuddyIds_result(object):
             if fid == 0:
                 if ftype == TType.MAP:
                     self.success = {}
-                    (_ktype1142, _vtype1143, _size1141) = iprot.readMapBegin()
-                    for _i1145 in range(_size1141):
-                        _key1146 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        _val1147 = iprot.readI64()
-                        self.success[_key1146] = _val1147
+                    (_ktype1149, _vtype1150, _size1148) = iprot.readMapBegin()
+                    for _i1152 in range(_size1148):
+                        _key1153 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val1154 = iprot.readI64()
+                        self.success[_key1153] = _val1154
                     iprot.readMapEnd()
                 else:
                     iprot.skip(ftype)
@@ -1597,9 +1597,9 @@ class getNewlyReleasedBuddyIds_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.MAP, 0)
             oprot.writeMapBegin(TType.STRING, TType.I64, len(self.success))
-            for kiter1148, viter1149 in self.success.items():
-                oprot.writeString(kiter1148.encode('utf-8') if sys.version_info[0] == 2 else kiter1148)
-                oprot.writeI64(viter1149)
+            for kiter1155, viter1156 in self.success.items():
+                oprot.writeString(kiter1155.encode('utf-8') if sys.version_info[0] == 2 else kiter1155)
+                oprot.writeI64(viter1156)
             oprot.writeMapEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -1899,11 +1899,11 @@ class getPopularBuddyLists_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype1153, _size1150) = iprot.readListBegin()
-                    for _i1154 in range(_size1150):
-                        _elem1155 = BuddyList()
-                        _elem1155.read(iprot)
-                        self.success.append(_elem1155)
+                    (_etype1160, _size1157) = iprot.readListBegin()
+                    for _i1161 in range(_size1157):
+                        _elem1162 = BuddyList()
+                        _elem1162.read(iprot)
+                        self.success.append(_elem1162)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -1926,8 +1926,8 @@ class getPopularBuddyLists_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter1156 in self.success:
-                iter1156.write(oprot)
+            for iter1163 in self.success:
+                iter1163.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -2055,11 +2055,11 @@ class getPromotedBuddyContacts_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype1160, _size1157) = iprot.readListBegin()
-                    for _i1161 in range(_size1157):
-                        _elem1162 = Contact()
-                        _elem1162.read(iprot)
-                        self.success.append(_elem1162)
+                    (_etype1167, _size1164) = iprot.readListBegin()
+                    for _i1168 in range(_size1164):
+                        _elem1169 = Contact()
+                        _elem1169.read(iprot)
+                        self.success.append(_elem1169)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -2082,8 +2082,8 @@ class getPromotedBuddyContacts_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter1163 in self.success:
-                iter1163.write(oprot)
+            for iter1170 in self.success:
+                iter1170.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:

@@ -3008,11 +3008,11 @@ class getCoinProducts_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype1323, _size1320) = iprot.readListBegin()
-                    for _i1324 in range(_size1320):
-                        _elem1325 = CoinProductItem()
-                        _elem1325.read(iprot)
-                        self.success.append(_elem1325)
+                    (_etype1330, _size1327) = iprot.readListBegin()
+                    for _i1331 in range(_size1327):
+                        _elem1332 = CoinProductItem()
+                        _elem1332.read(iprot)
+                        self.success.append(_elem1332)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -3035,8 +3035,8 @@ class getCoinProducts_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter1326 in self.success:
-                iter1326.write(oprot)
+            for iter1333 in self.success:
+                iter1333.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -3188,11 +3188,11 @@ class getCoinProductsByPgCode_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype1330, _size1327) = iprot.readListBegin()
-                    for _i1331 in range(_size1327):
-                        _elem1332 = CoinProductItem()
-                        _elem1332.read(iprot)
-                        self.success.append(_elem1332)
+                    (_etype1337, _size1334) = iprot.readListBegin()
+                    for _i1338 in range(_size1334):
+                        _elem1339 = CoinProductItem()
+                        _elem1339.read(iprot)
+                        self.success.append(_elem1339)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -3215,8 +3215,8 @@ class getCoinProductsByPgCode_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter1333 in self.success:
-                iter1333.write(oprot)
+            for iter1340 in self.success:
+                iter1340.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -4738,10 +4738,10 @@ class getProductList_args(object):
             if fid == 2:
                 if ftype == TType.LIST:
                     self.productIdList = []
-                    (_etype1337, _size1334) = iprot.readListBegin()
-                    for _i1338 in range(_size1334):
-                        _elem1339 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.productIdList.append(_elem1339)
+                    (_etype1344, _size1341) = iprot.readListBegin()
+                    for _i1345 in range(_size1341):
+                        _elem1346 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.productIdList.append(_elem1346)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -4768,8 +4768,8 @@ class getProductList_args(object):
         if self.productIdList is not None:
             oprot.writeFieldBegin('productIdList', TType.LIST, 2)
             oprot.writeListBegin(TType.STRING, len(self.productIdList))
-            for iter1340 in self.productIdList:
-                oprot.writeString(iter1340.encode('utf-8') if sys.version_info[0] == 2 else iter1340)
+            for iter1347 in self.productIdList:
+                oprot.writeString(iter1347.encode('utf-8') if sys.version_info[0] == 2 else iter1347)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.language is not None:
@@ -4908,10 +4908,10 @@ class getProductListWithCarrier_args(object):
             if fid == 2:
                 if ftype == TType.LIST:
                     self.productIdList = []
-                    (_etype1344, _size1341) = iprot.readListBegin()
-                    for _i1345 in range(_size1341):
-                        _elem1346 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.productIdList.append(_elem1346)
+                    (_etype1351, _size1348) = iprot.readListBegin()
+                    for _i1352 in range(_size1348):
+                        _elem1353 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.productIdList.append(_elem1353)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -4943,8 +4943,8 @@ class getProductListWithCarrier_args(object):
         if self.productIdList is not None:
             oprot.writeFieldBegin('productIdList', TType.LIST, 2)
             oprot.writeListBegin(TType.STRING, len(self.productIdList))
-            for iter1347 in self.productIdList:
-                oprot.writeString(iter1347.encode('utf-8') if sys.version_info[0] == 2 else iter1347)
+            for iter1354 in self.productIdList:
+                oprot.writeString(iter1354.encode('utf-8') if sys.version_info[0] == 2 else iter1354)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.language is not None:

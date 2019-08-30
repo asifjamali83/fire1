@@ -2708,11 +2708,11 @@ class getChannelNotificationSettings_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype1267, _size1264) = iprot.readListBegin()
-                    for _i1268 in range(_size1264):
-                        _elem1269 = ChannelNotificationSetting()
-                        _elem1269.read(iprot)
-                        self.success.append(_elem1269)
+                    (_etype1274, _size1271) = iprot.readListBegin()
+                    for _i1275 in range(_size1271):
+                        _elem1276 = ChannelNotificationSetting()
+                        _elem1276.read(iprot)
+                        self.success.append(_elem1276)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -2735,8 +2735,8 @@ class getChannelNotificationSettings_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter1270 in self.success:
-                iter1270.write(oprot)
+            for iter1277 in self.success:
+                iter1277.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -3072,10 +3072,10 @@ class getFriendChannelMatrices_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.channelIds = []
-                    (_etype1274, _size1271) = iprot.readListBegin()
-                    for _i1275 in range(_size1271):
-                        _elem1276 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.channelIds.append(_elem1276)
+                    (_etype1281, _size1278) = iprot.readListBegin()
+                    for _i1282 in range(_size1278):
+                        _elem1283 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.channelIds.append(_elem1283)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -3092,8 +3092,8 @@ class getFriendChannelMatrices_args(object):
         if self.channelIds is not None:
             oprot.writeFieldBegin('channelIds', TType.LIST, 1)
             oprot.writeListBegin(TType.STRING, len(self.channelIds))
-            for iter1277 in self.channelIds:
-                oprot.writeString(iter1277.encode('utf-8') if sys.version_info[0] == 2 else iter1277)
+            for iter1284 in self.channelIds:
+                oprot.writeString(iter1284.encode('utf-8') if sys.version_info[0] == 2 else iter1284)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -3917,10 +3917,10 @@ class issueRequestTokenWithAuthScheme_args(object):
             elif fid == 3:
                 if ftype == TType.LIST:
                     self.authScheme = []
-                    (_etype1281, _size1278) = iprot.readListBegin()
-                    for _i1282 in range(_size1278):
-                        _elem1283 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.authScheme.append(_elem1283)
+                    (_etype1288, _size1285) = iprot.readListBegin()
+                    for _i1289 in range(_size1285):
+                        _elem1290 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.authScheme.append(_elem1290)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -3950,8 +3950,8 @@ class issueRequestTokenWithAuthScheme_args(object):
         if self.authScheme is not None:
             oprot.writeFieldBegin('authScheme', TType.LIST, 3)
             oprot.writeListBegin(TType.STRING, len(self.authScheme))
-            for iter1284 in self.authScheme:
-                oprot.writeString(iter1284.encode('utf-8') if sys.version_info[0] == 2 else iter1284)
+            for iter1291 in self.authScheme:
+                oprot.writeString(iter1291.encode('utf-8') if sys.version_info[0] == 2 else iter1291)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.returnUrl is not None:
@@ -4239,11 +4239,11 @@ class getUpdatedChannelIds_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.channelIds = []
-                    (_etype1288, _size1285) = iprot.readListBegin()
-                    for _i1289 in range(_size1285):
-                        _elem1290 = ChannelIdWithLastUpdated()
-                        _elem1290.read(iprot)
-                        self.channelIds.append(_elem1290)
+                    (_etype1295, _size1292) = iprot.readListBegin()
+                    for _i1296 in range(_size1292):
+                        _elem1297 = ChannelIdWithLastUpdated()
+                        _elem1297.read(iprot)
+                        self.channelIds.append(_elem1297)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -4260,8 +4260,8 @@ class getUpdatedChannelIds_args(object):
         if self.channelIds is not None:
             oprot.writeFieldBegin('channelIds', TType.LIST, 1)
             oprot.writeListBegin(TType.STRUCT, len(self.channelIds))
-            for iter1291 in self.channelIds:
-                iter1291.write(oprot)
+            for iter1298 in self.channelIds:
+                iter1298.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -4311,10 +4311,10 @@ class getUpdatedChannelIds_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype1295, _size1292) = iprot.readListBegin()
-                    for _i1296 in range(_size1292):
-                        _elem1297 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem1297)
+                    (_etype1302, _size1299) = iprot.readListBegin()
+                    for _i1303 in range(_size1299):
+                        _elem1304 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem1304)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -4337,8 +4337,8 @@ class getUpdatedChannelIds_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter1298 in self.success:
-                oprot.writeString(iter1298.encode('utf-8') if sys.version_info[0] == 2 else iter1298)
+            for iter1305 in self.success:
+                oprot.writeString(iter1305.encode('utf-8') if sys.version_info[0] == 2 else iter1305)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -4809,11 +4809,11 @@ class updateChannelNotificationSetting_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.setting = []
-                    (_etype1302, _size1299) = iprot.readListBegin()
-                    for _i1303 in range(_size1299):
-                        _elem1304 = ChannelNotificationSetting()
-                        _elem1304.read(iprot)
-                        self.setting.append(_elem1304)
+                    (_etype1309, _size1306) = iprot.readListBegin()
+                    for _i1310 in range(_size1306):
+                        _elem1311 = ChannelNotificationSetting()
+                        _elem1311.read(iprot)
+                        self.setting.append(_elem1311)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -4830,8 +4830,8 @@ class updateChannelNotificationSetting_args(object):
         if self.setting is not None:
             oprot.writeFieldBegin('setting', TType.LIST, 1)
             oprot.writeListBegin(TType.STRUCT, len(self.setting))
-            for iter1305 in self.setting:
-                iter1305.write(oprot)
+            for iter1312 in self.setting:
+                iter1312.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()

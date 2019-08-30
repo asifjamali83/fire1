@@ -5273,11 +5273,11 @@ class getAllSimpleChannelContacts_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2101, _size2098) = iprot.readListBegin()
-                    for _i2102 in range(_size2098):
-                        _elem2103 = SimpleChannelContact()
-                        _elem2103.read(iprot)
-                        self.success.append(_elem2103)
+                    (_etype2108, _size2105) = iprot.readListBegin()
+                    for _i2109 in range(_size2105):
+                        _elem2110 = SimpleChannelContact()
+                        _elem2110.read(iprot)
+                        self.success.append(_elem2110)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -5300,8 +5300,8 @@ class getAllSimpleChannelContacts_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2104 in self.success:
-                iter2104.write(oprot)
+            for iter2111 in self.success:
+                iter2111.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -5398,11 +5398,11 @@ class getUserIdentities_result(object):
             if fid == 0:
                 if ftype == TType.MAP:
                     self.success = {}
-                    (_ktype2106, _vtype2107, _size2105) = iprot.readMapBegin()
-                    for _i2109 in range(_size2105):
-                        _key2110 = iprot.readI32()
-                        _val2111 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success[_key2110] = _val2111
+                    (_ktype2113, _vtype2114, _size2112) = iprot.readMapBegin()
+                    for _i2116 in range(_size2112):
+                        _key2117 = iprot.readI32()
+                        _val2118 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success[_key2117] = _val2118
                     iprot.readMapEnd()
                 else:
                     iprot.skip(ftype)
@@ -5425,9 +5425,9 @@ class getUserIdentities_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.MAP, 0)
             oprot.writeMapBegin(TType.I32, TType.STRING, len(self.success))
-            for kiter2112, viter2113 in self.success.items():
-                oprot.writeI32(kiter2112)
-                oprot.writeString(viter2113.encode('utf-8') if sys.version_info[0] == 2 else viter2113)
+            for kiter2119, viter2120 in self.success.items():
+                oprot.writeI32(kiter2119)
+                oprot.writeString(viter2120.encode('utf-8') if sys.version_info[0] == 2 else viter2120)
             oprot.writeMapEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -6068,10 +6068,10 @@ class getPreferredDisplayName_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.mids = []
-                    (_etype2117, _size2114) = iprot.readListBegin()
-                    for _i2118 in range(_size2114):
-                        _elem2119 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.mids.append(_elem2119)
+                    (_etype2124, _size2121) = iprot.readListBegin()
+                    for _i2125 in range(_size2121):
+                        _elem2126 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem2126)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -6088,8 +6088,8 @@ class getPreferredDisplayName_args(object):
         if self.mids is not None:
             oprot.writeFieldBegin('mids', TType.LIST, 1)
             oprot.writeListBegin(TType.STRING, len(self.mids))
-            for iter2120 in self.mids:
-                oprot.writeString(iter2120.encode('utf-8') if sys.version_info[0] == 2 else iter2120)
+            for iter2127 in self.mids:
+                oprot.writeString(iter2127.encode('utf-8') if sys.version_info[0] == 2 else iter2127)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -6139,11 +6139,11 @@ class getPreferredDisplayName_result(object):
             if fid == 0:
                 if ftype == TType.MAP:
                     self.success = {}
-                    (_ktype2122, _vtype2123, _size2121) = iprot.readMapBegin()
-                    for _i2125 in range(_size2121):
-                        _key2126 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        _val2127 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success[_key2126] = _val2127
+                    (_ktype2129, _vtype2130, _size2128) = iprot.readMapBegin()
+                    for _i2132 in range(_size2128):
+                        _key2133 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val2134 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success[_key2133] = _val2134
                     iprot.readMapEnd()
                 else:
                     iprot.skip(ftype)
@@ -6166,9 +6166,9 @@ class getPreferredDisplayName_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.MAP, 0)
             oprot.writeMapBegin(TType.STRING, TType.STRING, len(self.success))
-            for kiter2128, viter2129 in self.success.items():
-                oprot.writeString(kiter2128.encode('utf-8') if sys.version_info[0] == 2 else kiter2128)
-                oprot.writeString(viter2129.encode('utf-8') if sys.version_info[0] == 2 else viter2129)
+            for kiter2135, viter2136 in self.success.items():
+                oprot.writeString(kiter2135.encode('utf-8') if sys.version_info[0] == 2 else kiter2135)
+                oprot.writeString(viter2136.encode('utf-8') if sys.version_info[0] == 2 else viter2136)
             oprot.writeMapEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -6220,10 +6220,10 @@ class getContactsForChannel_args(object):
             if fid == 2:
                 if ftype == TType.LIST:
                     self.ids = []
-                    (_etype2133, _size2130) = iprot.readListBegin()
-                    for _i2134 in range(_size2130):
-                        _elem2135 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.ids.append(_elem2135)
+                    (_etype2140, _size2137) = iprot.readListBegin()
+                    for _i2141 in range(_size2137):
+                        _elem2142 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.ids.append(_elem2142)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -6240,8 +6240,8 @@ class getContactsForChannel_args(object):
         if self.ids is not None:
             oprot.writeFieldBegin('ids', TType.LIST, 2)
             oprot.writeListBegin(TType.STRING, len(self.ids))
-            for iter2136 in self.ids:
-                oprot.writeString(iter2136.encode('utf-8') if sys.version_info[0] == 2 else iter2136)
+            for iter2143 in self.ids:
+                oprot.writeString(iter2143.encode('utf-8') if sys.version_info[0] == 2 else iter2143)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -6292,11 +6292,11 @@ class getContactsForChannel_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2140, _size2137) = iprot.readListBegin()
-                    for _i2141 in range(_size2137):
-                        _elem2142 = Contact()
-                        _elem2142.read(iprot)
-                        self.success.append(_elem2142)
+                    (_etype2147, _size2144) = iprot.readListBegin()
+                    for _i2148 in range(_size2144):
+                        _elem2149 = Contact()
+                        _elem2149.read(iprot)
+                        self.success.append(_elem2149)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -6319,8 +6319,8 @@ class getContactsForChannel_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2143 in self.success:
-                iter2143.write(oprot)
+            for iter2150 in self.success:
+                iter2150.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -6472,11 +6472,11 @@ class getCallCreditProducts_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2147, _size2144) = iprot.readListBegin()
-                    for _i2148 in range(_size2144):
-                        _elem2149 = CoinProductItem()
-                        _elem2149.read(iprot)
-                        self.success.append(_elem2149)
+                    (_etype2154, _size2151) = iprot.readListBegin()
+                    for _i2155 in range(_size2151):
+                        _elem2156 = CoinProductItem()
+                        _elem2156.read(iprot)
+                        self.success.append(_elem2156)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -6499,8 +6499,8 @@ class getCallCreditProducts_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2150 in self.success:
-                iter2150.write(oprot)
+            for iter2157 in self.success:
+                iter2157.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -6616,11 +6616,11 @@ class getCompactContacts_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2154, _size2151) = iprot.readListBegin()
-                    for _i2155 in range(_size2151):
-                        _elem2156 = CompactContact()
-                        _elem2156.read(iprot)
-                        self.success.append(_elem2156)
+                    (_etype2161, _size2158) = iprot.readListBegin()
+                    for _i2162 in range(_size2158):
+                        _elem2163 = CompactContact()
+                        _elem2163.read(iprot)
+                        self.success.append(_elem2163)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -6643,8 +6643,8 @@ class getCompactContacts_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2157 in self.success:
-                iter2157.write(oprot)
+            for iter2164 in self.success:
+                iter2164.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -6962,10 +6962,10 @@ class lookupGroupMembers_args(object):
             elif fid == 2:
                 if ftype == TType.LIST:
                     self.mids = []
-                    (_etype2161, _size2158) = iprot.readListBegin()
-                    for _i2162 in range(_size2158):
-                        _elem2163 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.mids.append(_elem2163)
+                    (_etype2168, _size2165) = iprot.readListBegin()
+                    for _i2169 in range(_size2165):
+                        _elem2170 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem2170)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -6986,8 +6986,8 @@ class lookupGroupMembers_args(object):
         if self.mids is not None:
             oprot.writeFieldBegin('mids', TType.LIST, 2)
             oprot.writeListBegin(TType.STRING, len(self.mids))
-            for iter2164 in self.mids:
-                oprot.writeString(iter2164.encode('utf-8') if sys.version_info[0] == 2 else iter2164)
+            for iter2171 in self.mids:
+                oprot.writeString(iter2171.encode('utf-8') if sys.version_info[0] == 2 else iter2171)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -7038,11 +7038,11 @@ class lookupGroupMembers_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2168, _size2165) = iprot.readListBegin()
-                    for _i2169 in range(_size2165):
-                        _elem2170 = SimpleChannelContact()
-                        _elem2170.read(iprot)
-                        self.success.append(_elem2170)
+                    (_etype2175, _size2172) = iprot.readListBegin()
+                    for _i2176 in range(_size2172):
+                        _elem2177 = SimpleChannelContact()
+                        _elem2177.read(iprot)
+                        self.success.append(_elem2177)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -7065,8 +7065,8 @@ class lookupGroupMembers_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2171 in self.success:
-                iter2171.write(oprot)
+            for iter2178 in self.success:
+                iter2178.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -7636,10 +7636,10 @@ class createRoomWithBuddy_args(object):
             elif fid == 3:
                 if ftype == TType.LIST:
                     self.contactIds = []
-                    (_etype2175, _size2172) = iprot.readListBegin()
-                    for _i2176 in range(_size2172):
-                        _elem2177 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.contactIds.append(_elem2177)
+                    (_etype2182, _size2179) = iprot.readListBegin()
+                    for _i2183 in range(_size2179):
+                        _elem2184 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.contactIds.append(_elem2184)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -7664,8 +7664,8 @@ class createRoomWithBuddy_args(object):
         if self.contactIds is not None:
             oprot.writeFieldBegin('contactIds', TType.LIST, 3)
             oprot.writeListBegin(TType.STRING, len(self.contactIds))
-            for iter2178 in self.contactIds:
-                oprot.writeString(iter2178.encode('utf-8') if sys.version_info[0] == 2 else iter2178)
+            for iter2185 in self.contactIds:
+                oprot.writeString(iter2185.encode('utf-8') if sys.version_info[0] == 2 else iter2185)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -8368,10 +8368,10 @@ class getFavoriteGroupIdsForChannel_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2182, _size2179) = iprot.readListBegin()
-                    for _i2183 in range(_size2179):
-                        _elem2184 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2184)
+                    (_etype2189, _size2186) = iprot.readListBegin()
+                    for _i2190 in range(_size2186):
+                        _elem2191 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2191)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -8394,8 +8394,8 @@ class getFavoriteGroupIdsForChannel_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2185 in self.success:
-                oprot.writeString(iter2185.encode('utf-8') if sys.version_info[0] == 2 else iter2185)
+            for iter2192 in self.success:
+                oprot.writeString(iter2192.encode('utf-8') if sys.version_info[0] == 2 else iter2192)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -8739,10 +8739,10 @@ class inviteIntoGroupCall_args(object):
             elif fid == 3:
                 if ftype == TType.LIST:
                     self.memberMids = []
-                    (_etype2189, _size2186) = iprot.readListBegin()
-                    for _i2190 in range(_size2186):
-                        _elem2191 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.memberMids.append(_elem2191)
+                    (_etype2196, _size2193) = iprot.readListBegin()
+                    for _i2197 in range(_size2193):
+                        _elem2198 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.memberMids.append(_elem2198)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -8768,8 +8768,8 @@ class inviteIntoGroupCall_args(object):
         if self.memberMids is not None:
             oprot.writeFieldBegin('memberMids', TType.LIST, 3)
             oprot.writeListBegin(TType.STRING, len(self.memberMids))
-            for iter2192 in self.memberMids:
-                oprot.writeString(iter2192.encode('utf-8') if sys.version_info[0] == 2 else iter2192)
+            for iter2199 in self.memberMids:
+                oprot.writeString(iter2199.encode('utf-8') if sys.version_info[0] == 2 else iter2199)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.mediaType is not None:
@@ -8931,10 +8931,10 @@ class getFriendMids_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2196, _size2193) = iprot.readListBegin()
-                    for _i2197 in range(_size2193):
-                        _elem2198 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2198)
+                    (_etype2203, _size2200) = iprot.readListBegin()
+                    for _i2204 in range(_size2200):
+                        _elem2205 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2205)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -8957,8 +8957,8 @@ class getFriendMids_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2199 in self.success:
-                oprot.writeString(iter2199.encode('utf-8') if sys.version_info[0] == 2 else iter2199)
+            for iter2206 in self.success:
+                oprot.writeString(iter2206.encode('utf-8') if sys.version_info[0] == 2 else iter2206)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -9995,10 +9995,10 @@ class getGroupsForChannel_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.groupIds = []
-                    (_etype2203, _size2200) = iprot.readListBegin()
-                    for _i2204 in range(_size2200):
-                        _elem2205 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.groupIds.append(_elem2205)
+                    (_etype2210, _size2207) = iprot.readListBegin()
+                    for _i2211 in range(_size2207):
+                        _elem2212 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.groupIds.append(_elem2212)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -10015,8 +10015,8 @@ class getGroupsForChannel_args(object):
         if self.groupIds is not None:
             oprot.writeFieldBegin('groupIds', TType.LIST, 1)
             oprot.writeListBegin(TType.STRING, len(self.groupIds))
-            for iter2206 in self.groupIds:
-                oprot.writeString(iter2206.encode('utf-8') if sys.version_info[0] == 2 else iter2206)
+            for iter2213 in self.groupIds:
+                oprot.writeString(iter2213.encode('utf-8') if sys.version_info[0] == 2 else iter2213)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -10066,11 +10066,11 @@ class getGroupsForChannel_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2210, _size2207) = iprot.readListBegin()
-                    for _i2211 in range(_size2207):
-                        _elem2212 = Group()
-                        _elem2212.read(iprot)
-                        self.success.append(_elem2212)
+                    (_etype2217, _size2214) = iprot.readListBegin()
+                    for _i2218 in range(_size2214):
+                        _elem2219 = Group()
+                        _elem2219.read(iprot)
+                        self.success.append(_elem2219)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -10093,8 +10093,8 @@ class getGroupsForChannel_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2213 in self.success:
-                iter2213.write(oprot)
+            for iter2220 in self.success:
+                iter2220.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -10610,11 +10610,11 @@ class acquirePaidCallCurrencyExchangeRate_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2217, _size2214) = iprot.readListBegin()
-                    for _i2218 in range(_size2214):
-                        _elem2219 = PaidCallCurrencyExchangeRate()
-                        _elem2219.read(iprot)
-                        self.success.append(_elem2219)
+                    (_etype2224, _size2221) = iprot.readListBegin()
+                    for _i2225 in range(_size2221):
+                        _elem2226 = PaidCallCurrencyExchangeRate()
+                        _elem2226.read(iprot)
+                        self.success.append(_elem2226)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -10637,8 +10637,8 @@ class acquirePaidCallCurrencyExchangeRate_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2220 in self.success:
-                iter2220.write(oprot)
+            for iter2227 in self.success:
+                iter2227.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -10753,10 +10753,10 @@ class getRoomMemberMidsForAppPlatform_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2224, _size2221) = iprot.readListBegin()
-                    for _i2225 in range(_size2221):
-                        _elem2226 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2226)
+                    (_etype2231, _size2228) = iprot.readListBegin()
+                    for _i2232 in range(_size2228):
+                        _elem2233 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2233)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -10779,8 +10779,8 @@ class getRoomMemberMidsForAppPlatform_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2227 in self.success:
-                oprot.writeString(iter2227.encode('utf-8') if sys.version_info[0] == 2 else iter2227)
+            for iter2234 in self.success:
+                oprot.writeString(iter2234.encode('utf-8') if sys.version_info[0] == 2 else iter2234)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -10896,11 +10896,11 @@ class getPaidCallBalanceList_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2231, _size2228) = iprot.readListBegin()
-                    for _i2232 in range(_size2228):
-                        _elem2233 = PaidCallBalance()
-                        _elem2233.read(iprot)
-                        self.success.append(_elem2233)
+                    (_etype2238, _size2235) = iprot.readListBegin()
+                    for _i2239 in range(_size2235):
+                        _elem2240 = PaidCallBalance()
+                        _elem2240.read(iprot)
+                        self.success.append(_elem2240)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -10923,8 +10923,8 @@ class getPaidCallBalanceList_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2234 in self.success:
-                iter2234.write(oprot)
+            for iter2241 in self.success:
+                iter2241.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -10976,10 +10976,10 @@ class getPersonalInfos_args(object):
             if fid == 1:
                 if ftype == TType.SET:
                     self.requiredPersonalInfos = set()
-                    (_etype2238, _size2235) = iprot.readSetBegin()
-                    for _i2239 in range(_size2235):
-                        _elem2240 = iprot.readI32()
-                        self.requiredPersonalInfos.add(_elem2240)
+                    (_etype2245, _size2242) = iprot.readSetBegin()
+                    for _i2246 in range(_size2242):
+                        _elem2247 = iprot.readI32()
+                        self.requiredPersonalInfos.add(_elem2247)
                     iprot.readSetEnd()
                 else:
                     iprot.skip(ftype)
@@ -10996,8 +10996,8 @@ class getPersonalInfos_args(object):
         if self.requiredPersonalInfos is not None:
             oprot.writeFieldBegin('requiredPersonalInfos', TType.SET, 1)
             oprot.writeSetBegin(TType.I32, len(self.requiredPersonalInfos))
-            for iter2241 in self.requiredPersonalInfos:
-                oprot.writeI32(iter2241)
+            for iter2248 in self.requiredPersonalInfos:
+                oprot.writeI32(iter2248)
             oprot.writeSetEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -11047,11 +11047,11 @@ class getPersonalInfos_result(object):
             if fid == 0:
                 if ftype == TType.MAP:
                     self.success = {}
-                    (_ktype2243, _vtype2244, _size2242) = iprot.readMapBegin()
-                    for _i2246 in range(_size2242):
-                        _key2247 = iprot.readI32()
-                        _val2248 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success[_key2247] = _val2248
+                    (_ktype2250, _vtype2251, _size2249) = iprot.readMapBegin()
+                    for _i2253 in range(_size2249):
+                        _key2254 = iprot.readI32()
+                        _val2255 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success[_key2254] = _val2255
                     iprot.readMapEnd()
                 else:
                     iprot.skip(ftype)
@@ -11074,9 +11074,9 @@ class getPersonalInfos_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.MAP, 0)
             oprot.writeMapBegin(TType.I32, TType.STRING, len(self.success))
-            for kiter2249, viter2250 in self.success.items():
-                oprot.writeI32(kiter2249)
-                oprot.writeString(viter2250.encode('utf-8') if sys.version_info[0] == 2 else viter2250)
+            for kiter2256, viter2257 in self.success.items():
+                oprot.writeI32(kiter2256)
+                oprot.writeString(viter2257.encode('utf-8') if sys.version_info[0] == 2 else viter2257)
             oprot.writeMapEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -11128,10 +11128,10 @@ class getPrimaryClientsForChannel_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.userMids = []
-                    (_etype2254, _size2251) = iprot.readListBegin()
-                    for _i2255 in range(_size2251):
-                        _elem2256 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.userMids.append(_elem2256)
+                    (_etype2261, _size2258) = iprot.readListBegin()
+                    for _i2262 in range(_size2258):
+                        _elem2263 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.userMids.append(_elem2263)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -11148,8 +11148,8 @@ class getPrimaryClientsForChannel_args(object):
         if self.userMids is not None:
             oprot.writeFieldBegin('userMids', TType.LIST, 1)
             oprot.writeListBegin(TType.STRING, len(self.userMids))
-            for iter2257 in self.userMids:
-                oprot.writeString(iter2257.encode('utf-8') if sys.version_info[0] == 2 else iter2257)
+            for iter2264 in self.userMids:
+                oprot.writeString(iter2264.encode('utf-8') if sys.version_info[0] == 2 else iter2264)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -11199,11 +11199,11 @@ class getPrimaryClientsForChannel_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2261, _size2258) = iprot.readListBegin()
-                    for _i2262 in range(_size2258):
-                        _elem2263 = SimpleChannelClient()
-                        _elem2263.read(iprot)
-                        self.success.append(_elem2263)
+                    (_etype2268, _size2265) = iprot.readListBegin()
+                    for _i2269 in range(_size2265):
+                        _elem2270 = SimpleChannelClient()
+                        _elem2270.read(iprot)
+                        self.success.append(_elem2270)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -11226,8 +11226,8 @@ class getPrimaryClientsForChannel_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2264 in self.success:
-                iter2264.write(oprot)
+            for iter2271 in self.success:
+                iter2271.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -11477,10 +11477,10 @@ class getGroupMemberMidsForAppPlatform_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2268, _size2265) = iprot.readListBegin()
-                    for _i2269 in range(_size2265):
-                        _elem2270 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2270)
+                    (_etype2275, _size2272) = iprot.readListBegin()
+                    for _i2276 in range(_size2272):
+                        _elem2277 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2277)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -11503,8 +11503,8 @@ class getGroupMemberMidsForAppPlatform_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2271 in self.success:
-                oprot.writeString(iter2271.encode('utf-8') if sys.version_info[0] == 2 else iter2271)
+            for iter2278 in self.success:
+                oprot.writeString(iter2278.encode('utf-8') if sys.version_info[0] == 2 else iter2278)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -11949,10 +11949,10 @@ class getReverseCompactContacts_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.ids = []
-                    (_etype2275, _size2272) = iprot.readListBegin()
-                    for _i2276 in range(_size2272):
-                        _elem2277 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.ids.append(_elem2277)
+                    (_etype2282, _size2279) = iprot.readListBegin()
+                    for _i2283 in range(_size2279):
+                        _elem2284 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.ids.append(_elem2284)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -11969,8 +11969,8 @@ class getReverseCompactContacts_args(object):
         if self.ids is not None:
             oprot.writeFieldBegin('ids', TType.LIST, 1)
             oprot.writeListBegin(TType.STRING, len(self.ids))
-            for iter2278 in self.ids:
-                oprot.writeString(iter2278.encode('utf-8') if sys.version_info[0] == 2 else iter2278)
+            for iter2285 in self.ids:
+                oprot.writeString(iter2285.encode('utf-8') if sys.version_info[0] == 2 else iter2285)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -12020,12 +12020,12 @@ class getReverseCompactContacts_result(object):
             if fid == 0:
                 if ftype == TType.MAP:
                     self.success = {}
-                    (_ktype2280, _vtype2281, _size2279) = iprot.readMapBegin()
-                    for _i2283 in range(_size2279):
-                        _key2284 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        _val2285 = CompactContact()
-                        _val2285.read(iprot)
-                        self.success[_key2284] = _val2285
+                    (_ktype2287, _vtype2288, _size2286) = iprot.readMapBegin()
+                    for _i2290 in range(_size2286):
+                        _key2291 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val2292 = CompactContact()
+                        _val2292.read(iprot)
+                        self.success[_key2291] = _val2292
                     iprot.readMapEnd()
                 else:
                     iprot.skip(ftype)
@@ -12048,9 +12048,9 @@ class getReverseCompactContacts_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.MAP, 0)
             oprot.writeMapBegin(TType.STRING, TType.STRUCT, len(self.success))
-            for kiter2286, viter2287 in self.success.items():
-                oprot.writeString(kiter2286.encode('utf-8') if sys.version_info[0] == 2 else kiter2286)
-                viter2287.write(oprot)
+            for kiter2293, viter2294 in self.success.items():
+                oprot.writeString(kiter2293.encode('utf-8') if sys.version_info[0] == 2 else kiter2293)
+                viter2294.write(oprot)
             oprot.writeMapEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -12418,10 +12418,10 @@ class getGroupMemberMids_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2291, _size2288) = iprot.readListBegin()
-                    for _i2292 in range(_size2288):
-                        _elem2293 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2293)
+                    (_etype2298, _size2295) = iprot.readListBegin()
+                    for _i2299 in range(_size2295):
+                        _elem2300 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2300)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -12444,8 +12444,8 @@ class getGroupMemberMids_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2294 in self.success:
-                oprot.writeString(iter2294.encode('utf-8') if sys.version_info[0] == 2 else iter2294)
+            for iter2301 in self.success:
+                oprot.writeString(iter2301.encode('utf-8') if sys.version_info[0] == 2 else iter2301)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -12634,10 +12634,10 @@ class displayBuddySubscriberCountInBulk_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.mids = []
-                    (_etype2298, _size2295) = iprot.readListBegin()
-                    for _i2299 in range(_size2295):
-                        _elem2300 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.mids.append(_elem2300)
+                    (_etype2305, _size2302) = iprot.readListBegin()
+                    for _i2306 in range(_size2302):
+                        _elem2307 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem2307)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -12654,8 +12654,8 @@ class displayBuddySubscriberCountInBulk_args(object):
         if self.mids is not None:
             oprot.writeFieldBegin('mids', TType.LIST, 1)
             oprot.writeListBegin(TType.STRING, len(self.mids))
-            for iter2301 in self.mids:
-                oprot.writeString(iter2301.encode('utf-8') if sys.version_info[0] == 2 else iter2301)
+            for iter2308 in self.mids:
+                oprot.writeString(iter2308.encode('utf-8') if sys.version_info[0] == 2 else iter2308)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -12705,11 +12705,11 @@ class displayBuddySubscriberCountInBulk_result(object):
             if fid == 0:
                 if ftype == TType.MAP:
                     self.success = {}
-                    (_ktype2303, _vtype2304, _size2302) = iprot.readMapBegin()
-                    for _i2306 in range(_size2302):
-                        _key2307 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        _val2308 = iprot.readI64()
-                        self.success[_key2307] = _val2308
+                    (_ktype2310, _vtype2311, _size2309) = iprot.readMapBegin()
+                    for _i2313 in range(_size2309):
+                        _key2314 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val2315 = iprot.readI64()
+                        self.success[_key2314] = _val2315
                     iprot.readMapEnd()
                 else:
                     iprot.skip(ftype)
@@ -12732,9 +12732,9 @@ class displayBuddySubscriberCountInBulk_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.MAP, 0)
             oprot.writeMapBegin(TType.STRING, TType.I64, len(self.success))
-            for kiter2309, viter2310 in self.success.items():
-                oprot.writeString(kiter2309.encode('utf-8') if sys.version_info[0] == 2 else kiter2309)
-                oprot.writeI64(viter2310)
+            for kiter2316, viter2317 in self.success.items():
+                oprot.writeString(kiter2316.encode('utf-8') if sys.version_info[0] == 2 else kiter2316)
+                oprot.writeI64(viter2317)
             oprot.writeMapEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -12793,10 +12793,10 @@ class lookupRoomMembers_args(object):
             elif fid == 2:
                 if ftype == TType.LIST:
                     self.mids = []
-                    (_etype2314, _size2311) = iprot.readListBegin()
-                    for _i2315 in range(_size2311):
-                        _elem2316 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.mids.append(_elem2316)
+                    (_etype2321, _size2318) = iprot.readListBegin()
+                    for _i2322 in range(_size2318):
+                        _elem2323 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem2323)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -12817,8 +12817,8 @@ class lookupRoomMembers_args(object):
         if self.mids is not None:
             oprot.writeFieldBegin('mids', TType.LIST, 2)
             oprot.writeListBegin(TType.STRING, len(self.mids))
-            for iter2317 in self.mids:
-                oprot.writeString(iter2317.encode('utf-8') if sys.version_info[0] == 2 else iter2317)
+            for iter2324 in self.mids:
+                oprot.writeString(iter2324.encode('utf-8') if sys.version_info[0] == 2 else iter2324)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -12869,11 +12869,11 @@ class lookupRoomMembers_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2321, _size2318) = iprot.readListBegin()
-                    for _i2322 in range(_size2318):
-                        _elem2323 = SimpleChannelContact()
-                        _elem2323.read(iprot)
-                        self.success.append(_elem2323)
+                    (_etype2328, _size2325) = iprot.readListBegin()
+                    for _i2329 in range(_size2325):
+                        _elem2330 = SimpleChannelContact()
+                        _elem2330.read(iprot)
+                        self.success.append(_elem2330)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -12896,8 +12896,8 @@ class lookupRoomMembers_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2324 in self.success:
-                iter2324.write(oprot)
+            for iter2331 in self.success:
+                iter2331.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -12994,10 +12994,10 @@ class getFavoriteMidsForChannel_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2328, _size2325) = iprot.readListBegin()
-                    for _i2329 in range(_size2325):
-                        _elem2330 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2330)
+                    (_etype2335, _size2332) = iprot.readListBegin()
+                    for _i2336 in range(_size2332):
+                        _elem2337 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2337)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -13020,8 +13020,8 @@ class getFavoriteMidsForChannel_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2331 in self.success:
-                oprot.writeString(iter2331.encode('utf-8') if sys.version_info[0] == 2 else iter2331)
+            for iter2338 in self.success:
+                oprot.writeString(iter2338.encode('utf-8') if sys.version_info[0] == 2 else iter2338)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -13118,10 +13118,10 @@ class getAllContactIdsForChannel_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2335, _size2332) = iprot.readListBegin()
-                    for _i2336 in range(_size2332):
-                        _elem2337 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2337)
+                    (_etype2342, _size2339) = iprot.readListBegin()
+                    for _i2343 in range(_size2339):
+                        _elem2344 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2344)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -13144,8 +13144,8 @@ class getAllContactIdsForChannel_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2338 in self.success:
-                oprot.writeString(iter2338.encode('utf-8') if sys.version_info[0] == 2 else iter2338)
+            for iter2345 in self.success:
+                oprot.writeString(iter2345.encode('utf-8') if sys.version_info[0] == 2 else iter2345)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -13430,10 +13430,10 @@ class getUserTickets_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.userMids = []
-                    (_etype2342, _size2339) = iprot.readListBegin()
-                    for _i2343 in range(_size2339):
-                        _elem2344 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.userMids.append(_elem2344)
+                    (_etype2349, _size2346) = iprot.readListBegin()
+                    for _i2350 in range(_size2346):
+                        _elem2351 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.userMids.append(_elem2351)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -13450,8 +13450,8 @@ class getUserTickets_args(object):
         if self.userMids is not None:
             oprot.writeFieldBegin('userMids', TType.LIST, 1)
             oprot.writeListBegin(TType.STRING, len(self.userMids))
-            for iter2345 in self.userMids:
-                oprot.writeString(iter2345.encode('utf-8') if sys.version_info[0] == 2 else iter2345)
+            for iter2352 in self.userMids:
+                oprot.writeString(iter2352.encode('utf-8') if sys.version_info[0] == 2 else iter2352)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
@@ -13501,11 +13501,11 @@ class getUserTickets_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2349, _size2346) = iprot.readListBegin()
-                    for _i2350 in range(_size2346):
-                        _elem2351 = UserTicketResponse()
-                        _elem2351.read(iprot)
-                        self.success.append(_elem2351)
+                    (_etype2356, _size2353) = iprot.readListBegin()
+                    for _i2357 in range(_size2353):
+                        _elem2358 = UserTicketResponse()
+                        _elem2358.read(iprot)
+                        self.success.append(_elem2358)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -13528,8 +13528,8 @@ class getUserTickets_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2352 in self.success:
-                iter2352.write(oprot)
+            for iter2359 in self.success:
+                iter2359.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -13626,10 +13626,10 @@ class getOAFriendMids_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2356, _size2353) = iprot.readListBegin()
-                    for _i2357 in range(_size2353):
-                        _elem2358 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2358)
+                    (_etype2363, _size2360) = iprot.readListBegin()
+                    for _i2364 in range(_size2360):
+                        _elem2365 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2365)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -13652,8 +13652,8 @@ class getOAFriendMids_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2359 in self.success:
-                oprot.writeString(iter2359.encode('utf-8') if sys.version_info[0] == 2 else iter2359)
+            for iter2366 in self.success:
+                oprot.writeString(iter2366.encode('utf-8') if sys.version_info[0] == 2 else iter2366)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -13781,11 +13781,11 @@ class searchPaidCallUserRate_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2363, _size2360) = iprot.readListBegin()
-                    for _i2364 in range(_size2360):
-                        _elem2365 = PaidCallUserRate()
-                        _elem2365.read(iprot)
-                        self.success.append(_elem2365)
+                    (_etype2370, _size2367) = iprot.readListBegin()
+                    for _i2371 in range(_size2367):
+                        _elem2372 = PaidCallUserRate()
+                        _elem2372.read(iprot)
+                        self.success.append(_elem2372)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -13808,8 +13808,8 @@ class searchPaidCallUserRate_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2366 in self.success:
-                iter2366.write(oprot)
+            for iter2373 in self.success:
+                iter2373.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -13906,10 +13906,10 @@ class getJoinedGroupIdsForChannel_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2370, _size2367) = iprot.readListBegin()
-                    for _i2371 in range(_size2367):
-                        _elem2372 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2372)
+                    (_etype2377, _size2374) = iprot.readListBegin()
+                    for _i2378 in range(_size2374):
+                        _elem2379 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2379)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -13932,8 +13932,8 @@ class getJoinedGroupIdsForChannel_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2373 in self.success:
-                oprot.writeString(iter2373.encode('utf-8') if sys.version_info[0] == 2 else iter2373)
+            for iter2380 in self.success:
+                oprot.writeString(iter2380.encode('utf-8') if sys.version_info[0] == 2 else iter2380)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -14178,10 +14178,10 @@ class getUserMidsWhoAddedMe_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2377, _size2374) = iprot.readListBegin()
-                    for _i2378 in range(_size2374):
-                        _elem2379 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.success.append(_elem2379)
+                    (_etype2384, _size2381) = iprot.readListBegin()
+                    for _i2385 in range(_size2381):
+                        _elem2386 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem2386)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -14204,8 +14204,8 @@ class getUserMidsWhoAddedMe_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRING, len(self.success))
-            for iter2380 in self.success:
-                oprot.writeString(iter2380.encode('utf-8') if sys.version_info[0] == 2 else iter2380)
+            for iter2387 in self.success:
+                oprot.writeString(iter2387.encode('utf-8') if sys.version_info[0] == 2 else iter2387)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:
@@ -14535,10 +14535,10 @@ class getSimpleChannelContacts_args(object):
             if fid == 1:
                 if ftype == TType.LIST:
                     self.ids = []
-                    (_etype2384, _size2381) = iprot.readListBegin()
-                    for _i2385 in range(_size2381):
-                        _elem2386 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.ids.append(_elem2386)
+                    (_etype2391, _size2388) = iprot.readListBegin()
+                    for _i2392 in range(_size2388):
+                        _elem2393 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.ids.append(_elem2393)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -14560,8 +14560,8 @@ class getSimpleChannelContacts_args(object):
         if self.ids is not None:
             oprot.writeFieldBegin('ids', TType.LIST, 1)
             oprot.writeListBegin(TType.STRING, len(self.ids))
-            for iter2387 in self.ids:
-                oprot.writeString(iter2387.encode('utf-8') if sys.version_info[0] == 2 else iter2387)
+            for iter2394 in self.ids:
+                oprot.writeString(iter2394.encode('utf-8') if sys.version_info[0] == 2 else iter2394)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.statusSticonFallbackDisabled is not None:
@@ -14616,11 +14616,11 @@ class getSimpleChannelContacts_result(object):
             if fid == 0:
                 if ftype == TType.LIST:
                     self.success = []
-                    (_etype2391, _size2388) = iprot.readListBegin()
-                    for _i2392 in range(_size2388):
-                        _elem2393 = SimpleChannelContact()
-                        _elem2393.read(iprot)
-                        self.success.append(_elem2393)
+                    (_etype2398, _size2395) = iprot.readListBegin()
+                    for _i2399 in range(_size2395):
+                        _elem2400 = SimpleChannelContact()
+                        _elem2400.read(iprot)
+                        self.success.append(_elem2400)
                     iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
@@ -14643,8 +14643,8 @@ class getSimpleChannelContacts_result(object):
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.LIST, 0)
             oprot.writeListBegin(TType.STRUCT, len(self.success))
-            for iter2394 in self.success:
-                iter2394.write(oprot)
+            for iter2401 in self.success:
+                iter2401.write(oprot)
             oprot.writeListEnd()
             oprot.writeFieldEnd()
         if self.e is not None:

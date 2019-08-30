@@ -596,11 +596,11 @@ class notifyEmailConfirmationResult_args(object):
             if fid == 2:
                 if ftype == TType.MAP:
                     self.parameterMap = {}
-                    (_ktype962, _vtype963, _size961) = iprot.readMapBegin()
-                    for _i965 in range(_size961):
-                        _key966 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        _val967 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                        self.parameterMap[_key966] = _val967
+                    (_ktype969, _vtype970, _size968) = iprot.readMapBegin()
+                    for _i972 in range(_size968):
+                        _key973 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val974 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.parameterMap[_key973] = _val974
                     iprot.readMapEnd()
                 else:
                     iprot.skip(ftype)
@@ -617,9 +617,9 @@ class notifyEmailConfirmationResult_args(object):
         if self.parameterMap is not None:
             oprot.writeFieldBegin('parameterMap', TType.MAP, 2)
             oprot.writeMapBegin(TType.STRING, TType.STRING, len(self.parameterMap))
-            for kiter968, viter969 in self.parameterMap.items():
-                oprot.writeString(kiter968.encode('utf-8') if sys.version_info[0] == 2 else kiter968)
-                oprot.writeString(viter969.encode('utf-8') if sys.version_info[0] == 2 else viter969)
+            for kiter975, viter976 in self.parameterMap.items():
+                oprot.writeString(kiter975.encode('utf-8') if sys.version_info[0] == 2 else kiter975)
+                oprot.writeString(viter976.encode('utf-8') if sys.version_info[0] == 2 else viter976)
             oprot.writeMapEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
